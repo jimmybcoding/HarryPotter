@@ -1,0 +1,207 @@
+@font-face {
+  font-family: 'Bigelow+Rules';
+  src: url(./assets/BigelowRules-Regular.ttf);
+}
+
+#root {
+  max-width: 1280px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #726255;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  line-height: 0.5;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.question__wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+  font-family: 'Bigelow+Rules', serif;
+}
+
+.question__heading {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.question__text {
+  font-size: 3rem;
+  font-weight: 600;
+  background-color: #bebebe;
+  padding: 0.5em 0.75em;
+  width: 80%;
+  margin: 0.25em auto;
+  border-radius: 1em;
+}
+
+.question__answer-button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5em 0.75em;
+  border-radius: 1em;
+  margin-left: 1em;
+  background-color: #0e1a40;
+  color: #bebebe;
+  border: 2px solid #bebebe;
+  min-width: 15%;
+}
+
+/* sorting hat animation section */
+.sorting-hat-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-family: 'Bigelow+Rules', serif;
+  font-size: 2.5rem;
+}
+  
+.sorting-hat {
+  width: 30%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 1em;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  25% {transform: rotate(90deg);}
+  50% {transform:rotate(180deg);}
+  75% {transform: rotate(270deg);}
+  100% {transform: rotate(360deg);}
+}
+
+/* sorted winning house section mobile first design*/
+
+@media screen and (min-width: 600px) {
+
+  .winning-house-container {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    gap: 0.5rem;
+    display: flex;  
+  }
+
+  .winning-house-column-1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 2rem;
+  }
+  
+  .winning-house-column-2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .winning-house-logo {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    height: auto;
+  }
+}
+
+.winning-house-container {
+  position: absolute;
+  margin: 0 auto;
+  top: 0%;
+  left: 0%;
+  max-width: 100%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.winning-house-logo {
+  max-width: 50%;
+  height: auto;
+}
+
+.winning-house-famous-members {
+  border: 5px solid white;
+}
+
+.winning-house-restart-btn {
+  display: block;
+  margin: 0 auto;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 0.5em 0.75em;
+  background-color: black;
+  color: #bebebe;
+  border: 2px solid #bebebe;
+  border-radius: 1rem;
+  font-family: 'Bigelow+Rules', serif;
+}
+
+/* footer */
+.footer-container {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: space-around;
+  padding-bottom: 0.5rem;
+}
+
+.footer-btn {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 0.5em 0.75em;
+  background-color: black;
+  color: #bebebe;
+  border: 2px solid #bebebe;
+  border-radius: 1rem;
+  min-width: 18%;
+  font-family: 'Bigelow+Rules', serif;
+  align-self: flex-end;
+}
+
+.footer-house-pic {
+  width: 12%;
+  height: auto;
+  box-shadow: 0.5rem 0.5rem;
+}
+
+.footer-house-pic.hufflepuff {
+  color: #ecb939;
+}
+
+.footer-house-pic.slytherin {
+  color: #1a472a;
+}
+
+.footer-house-pic.gryffindor {
+  color: #740001;
+}
+
+.footer-house-pic.ravenclaw {
+  color: #0e1a40;
+}
