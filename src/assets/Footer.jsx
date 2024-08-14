@@ -1,5 +1,12 @@
 function Footer( {handleReset} ) {
   return (
+  <section className="footer-section">
+    <button
+      className="footer-btn" 
+      onClick={handleReset}
+    >
+      Reset Quiz
+    </button>
     <div className="footer-container">
         <img
         className="footer-house-pic hufflepuff" 
@@ -11,11 +18,6 @@ function Footer( {handleReset} ) {
         src="./Ravenclaw.jpg" 
         alt="Ravenclaw Crest"
         />
-        <button
-        className="footer-btn" 
-        onClick={handleReset}
-        >Reset Quiz
-        </button>
         <img
         className="footer-house-pic slytherin" 
         src="./Slytherin.jpg" 
@@ -27,6 +29,7 @@ function Footer( {handleReset} ) {
         alt="Gryffindor Crest"
          />
     </div>
+  </section>
   )
 }
 
