@@ -202,18 +202,20 @@ function App() {
         {
           endQuiz === false ? (
           <>
-            <div className="question__wrapper">
-              <h1 className="question__heading">{`Question: ${questionIndex + 1}`}</h1>
-              <p className="question__text">{questions[questionIndex].text}</p>
-              {questions[questionIndex].options.map((x,index) => {
-                return <button
-                className="question__answer-button"
-                onClick={() => handleClick(x.points)} key={index}>
-                  {x.answer}
-                </button>
-              })}
+            <div className="app-wrapper">
+              <div className="question__wrapper">
+                <h1 className="question__heading">{`Question: ${questionIndex + 1}`}</h1>
+                <p className="question__text">{questions[questionIndex].text}</p>
+                {questions[questionIndex].options.map((x,index) => {
+                  return <button
+                  className="question__answer-button"
+                  onClick={() => handleClick(x.points)} key={index}>
+                    {x.answer}
+                  </button>
+                })}
+              </div>
+              <Footer handleReset={handleReset}/>
             </div>
-            <Footer handleReset={handleReset}/>
           </>
           ) : (
             <div className="sorting-hat-page-container">
