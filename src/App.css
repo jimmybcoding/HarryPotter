@@ -4,7 +4,6 @@
 }
 
 #root {
-  max-width: 1280px;
   box-sizing: border-box;
 }
 
@@ -24,10 +23,14 @@ button:focus {
   cursor: pointer;
 }
 
+.app-wrapper {
+  max-height: 100vh;
+}
+
 .question__wrapper {
   width: 100%;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 0;
   text-align: center;
   font-family: 'Bigelow+Rules', serif;
 }
@@ -42,8 +45,9 @@ button:focus {
   font-weight: 600;
   background-color: #bebebe;
   padding: 0.5em 0.75em;
-  width: 80%;
-  margin: 0.25em auto;
+  width: 50%;
+  min-width: fit-content;
+  margin: 0.25em;
   border-radius: 1em;
 }
 
@@ -63,30 +67,34 @@ button:focus {
 /* sorting hat animation section */
 .sorting-hat-page-container {
   width: 100%;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
   margin: 0 auto;
   font-family: 'Bigelow+Rules', serif;
   font-size: 2.5rem;
 }
   
 .sorting-hat {
-  width: 30%;
+  width: 40%;
+  min-width: 200px;
+  max-width: 500px;
   height: auto;
   cursor: pointer;
   border-radius: 1em;
-  animation-name: rotate;
+  animation-name: fade;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
 
-@keyframes rotate {
-  25% {transform: rotate(90deg);}
-  50% {transform:rotate(180deg);}
-  75% {transform: rotate(270deg);}
-  100% {transform: rotate(360deg);}
+@keyframes fade {
+  25% {opacity: 0.5;}
+  50% {opacity: 1;}
+  75% {opacity: 0.5;}
+  100% {opacity: 1;}
 }
 
 /* sorted winning house section mobile first design*/
@@ -162,6 +170,15 @@ button:focus {
 }
 
 /* footer */
+.footer-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 1rem;
+  align-items: center;
+}
+
 .footer-container {
   display: flex;
   margin: 0 auto;
@@ -174,14 +191,15 @@ button:focus {
   font-size: 2.5rem;
   font-weight: 800;
   text-align: center;
-  padding: 0.5em 0.75em;
+  padding: 0.5rem 0.75rem;
+  margin: 1rem;
   background-color: black;
   color: #bebebe;
   border: 2px solid #bebebe;
   border-radius: 1rem;
-  min-width: 18%;
+  width: 20%;
+  min-width: fit-content;
   font-family: 'Bigelow+Rules', serif;
-  align-self: flex-end;
 }
 
 .footer-house-pic {
